@@ -4,7 +4,7 @@
 - Directly running on the terminal
 `./mvnw spring-boot:run`
 
-- Creating the .jar file
+- Building the java app to generate .jar file
 `./mvnw clean package`
 
 - Running app using .jar file
