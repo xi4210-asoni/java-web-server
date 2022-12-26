@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Get your greeting <a href="/greeting">here</a></p>
+    <script>
+        // Make a GET request to the endpoint
+        fetch('http://localhost:8080/status')
+          .then(response => response.json()) // Parse the response as JSON
+          .then(data => {
+            // Check the status field in the response
+            if (data.status === false) {
+              // If the status is false, set the body's background color to red
+              document.body.style.backgroundColor = 'red';
+            }
+          })
+          .catch(error => {
+            // If there was an error making the request or parsing the response, log it to the console
+            console.error(error);
+          });
+      </script>
+</body>
+</html>
