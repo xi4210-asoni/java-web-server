@@ -63,7 +63,7 @@ pipeline:
                       type: KubernetesDirect
                       spec:
                         connectorRef: KubernetesSetup
-                        namespace: harness-test
+                        namespace: harness-delegate-ng
                         resources:
                           limits:
                             cpu: "0.5"
